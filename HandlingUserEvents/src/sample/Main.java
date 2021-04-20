@@ -20,7 +20,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
     public void start(Stage primaryStage) throws Exception {
             primaryStage.setTitle("MyFX Application");
             button = new Button();
-            button.setText("Click me!");
+            button.setText("Hey Baby!");
             button.setOnAction(this);
 
             StackPane layout = new StackPane();
@@ -35,6 +35,6 @@ public class Main extends Application implements EventHandler<ActionEvent>{
     public void handle(ActionEvent actionEvent) {
         if(actionEvent.getSource()==button)
             System.out.println("ooooouuuu!... i love it when you touch me there!.....");
-        
+
     }
 }
