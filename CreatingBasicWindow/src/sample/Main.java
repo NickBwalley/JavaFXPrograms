@@ -14,7 +14,7 @@ public class Main extends Application{
 
     public static void main(String[] args){
         launch(args); // whenever your program starts its going to call the launch so the launch() goes to the
-            // application class set everything up and then call the start
+            // application class set everything up and then call the start()
     }
 
     @Override
