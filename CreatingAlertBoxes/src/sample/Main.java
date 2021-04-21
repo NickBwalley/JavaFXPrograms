@@ -19,6 +19,8 @@ public class Main extends Application {
         window.setTitle("MrBeast Shop");
 
         button = new Button("Click me!");
+        button.setOnAction(e -> AlertBoxes.display("WeAreLegion!", "ExpectUs!"));
+
         StackPane layout  = new StackPane();
         layout.getChildren().add(button);
         Scene scene = new Scene(layout, 300, 250);
