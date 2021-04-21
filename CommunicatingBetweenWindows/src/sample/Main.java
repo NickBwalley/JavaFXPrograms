@@ -21,11 +21,14 @@ public class Main  extends Application{
         window = primaryStage;
         window.setTitle("MrBeast!");
         button = new Button("Click me!");
+        button.setOnAction(e -> AlertBox.display("MrBeast", "You are Hacked!"));
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
         Scene scene = new Scene(layout, 300, 250);
         window.setScene(scene);
         window.show();
+
+
     }
 }
