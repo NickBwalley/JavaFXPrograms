@@ -21,7 +21,10 @@ public class Main  extends Application{
         window = primaryStage;
         window.setTitle("MrBeast!");
         button = new Button("Click me!");
-        button.setOnAction(e -> AlertBox.display("MrBeast", "You are Hacked!"));
+        button.setOnAction(e -> {
+            boolean  result = ConfirmBox.display("MyPictures", "Are you sure you want to send nudes?");
+            System.out.println(result);
+        });
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
