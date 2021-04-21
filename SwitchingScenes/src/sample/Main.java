@@ -18,6 +18,7 @@ public class Main extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        
         window = primaryStage;
         Label label1 = new Label("Welcome to the First Scene!");
         Button button1 = new Button("Go to Scene 2");
