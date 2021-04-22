@@ -20,7 +20,12 @@ public class Main  extends Application{
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
         window.setTitle("MrBeast!");
-        window.setOnCloseRequest(e -> closeProgram());
+
+        window.setOnCloseRequest(e -> {
+            e.consume();
+            closeProgram();
+        });
+
         button = new Button("Close Program!");
         button.setOnAction(e -> closeProgram());
 
@@ -32,7 +37,8 @@ public class Main  extends Application{
     }
 
     private void closeProgram(){
-        System.out.println("File is saved!");
-        window.close();
+        Boolean answer = ConfirmBox.display("ShopMrBeast", "Sure you want to close? ");
+        if(answer)
+            window.close();
     }
 }
