@@ -20,18 +20,19 @@ public class Main  extends Application{
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
         window.setTitle("MrBeast!");
-        button = new Button("Click me!");
-        button.setOnAction(e -> {
-            boolean  result = ConfirmBox.display("MyPictures", "Are you sure you want to send nudes?");
-            System.out.println(result);
-        });
+        window.setOnCloseRequest(e -> closeProgram());
+        button = new Button("Close Program!");
+        button.setOnAction(e -> closeProgram());
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
         Scene scene = new Scene(layout, 300, 250);
         window.setScene(scene);
         window.show();
+    }
 
-
+    private void closeProgram(){
+        System.out.println("File is saved!");
+        window.close();
     }
 }
