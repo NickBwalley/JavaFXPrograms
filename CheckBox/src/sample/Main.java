@@ -22,9 +22,10 @@ public class Main extends Application {
         CheckBox box3 = new CheckBox("Chicken");
         box3.setSelected(true); // set box3 to be selected by default
 
+
         // Button
         Button button = new Button("Order Now!");
-
+        button.setOnAction(e -> handleOptions(box1, box2, box3));
         // Layout
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20,20,20,20));
@@ -33,6 +34,20 @@ public class Main extends Application {
         Scene scene = new Scene(layout, 300, 250);
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    // Handle Options
+    private void handleOptions(CheckBox box1, CheckBox box2, CheckBox box3){
+        String message = "Users Order: \n";
+
+        if(box1.isSelected())
+            message+="Bacon\n";
+        if(box2.isSelected())
+            message+="Ham\n";
+        if(box3.isSelected())
+            message+="Chicken\n";
+        System.out.println(message);
+
     }
 
 
